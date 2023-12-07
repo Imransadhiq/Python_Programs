@@ -1,0 +1,113 @@
+1)Write a program that reads a single line of input and print the given input.
+Solution:
+word = str(input())
+print(word)
+
+
+2)Write a program to check if the last three characters in the two given strings are the same.The first and second lines of inputs are strings.
+
+Solution:
+word = input()
+word1 = input()
+print(word[-3:] == word1[-3:])
+Input:
+apple 
+pimple
+Output:True
+
+3) Write a program that reads the marks M in Maths, marks P in Physics and marks C in Chemistry and checks if both the below conditions are satisfied.
+M >= 35 and P >= 35 and C >= 35.
+M + P >= 90 or P + C >= 90 or M + C >= 90.
+
+Input
+The first line of input contains an integer representing marks M in Maths.
+The second line of input contains an integer representing marks P in Physics.
+The third line of input contains an integer representing marks C in Chemistry.
+Output
+The output should be a single line containing a boolean. True should be printed if both the given conditions are satisfied, otherwise False should be printed.
+Input:
+50
+35
+40
+Output:True
+
+
+Solution:
+m = int(input())
+p = int(input())
+c = int(input())
+if ((m >= 35) and (p>=35) and (c>=35)):
+    print("True")
+else:
+    print("False")
+
+4)Write a program that reads the marks M in Maths, marks P in Physics and marks C in Chemistry and checks if any of the below conditions is satisfied.
+
+M >= 60 and P >= 50 and C >= 45 and M + P + C >= 180.
+M + P >= 120 or C + P >= 110.
+Input
+The first line of input contains an integer representing marks M in Maths.
+The second line of input contains an integer representing marks P in Physics.
+The third line of input contains an integer representing marks C in Chemistry.
+
+Output
+The output should be a single line containing a boolean. True should be printed if any of the given conditions is satisfied, otherwise False should be printed.
+
+Explanation
+For example, if the given marks are M = 72, P = 65 and C = 51,
+
+✔ M >= 60 and P >= 50 and C >= 45 and M + P + C >= 180
+
+✔ M + P >= 120 or C + P >= 110
+
+The output should be True as any of the given conditions is satisfied.
+
+Sample Input 1
+72
+65
+51
+Sample Output 1
+True
+
+
+Solution:
+m = int(input())
+p = int(input())
+c = int(input())
+if((m>=60) and (p>=50) and (c>=45) and (m+p+c>=180)) or ((m+p>=120) or (c+p>=110)):
+    print("True")
+else:
+    print("False")
+
+5)Years, Weeks & Days
+Given N number of days as input, write a program to convert N number of days to years (Y), weeks (W) and days (D).
+Note: Take 1 year = 365 days.  
+Input
+The input contains single integer N.
+Output
+The first line of output contains an integer Y representing the number of years.
+The second line of output contains an integer W representing the number of weeks.
+The third line of output contains an integer D representing the number of days.
+Explanation
+Given  N = 1329. The value can be written as 
+1329 = 3 years + 33 weeks + 3 days
+So the output should be 
+3 33 3
+
+Sample Input:
+1329
+Sample Output:
+3
+33
+3
+
+Solution:
+N = int(input())
+year = N//365
+remdays = N%365
+week = remdays//7
+d = remdays %  7
+print(int(year))
+print(int(week))
+print(int(d))
+
